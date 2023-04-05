@@ -1,11 +1,11 @@
-About libxmlplusplus
-====================
+About libxmlplusplus-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libxmlplusplus-feedstock/blob/main/LICENSE.txt)
 
 Home: https://libxmlplusplus.github.io/libxmlplusplus/
 
 Package license: LGPL-2.1-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/libxmlplusplus-feedstock/blob/main/LICENSE.txt)
 
 Summary: This library provides a C++ interface to XML files. It uses libxml2 to access the XML files.
 
@@ -30,14 +30,14 @@ Current build status
               <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14321&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libxmlplusplus-feedstock?branchName=main&jobName=linux&configuration=linux_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libxmlplusplus-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
               <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14321&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libxmlplusplus-feedstock?branchName=main&jobName=osx&configuration=osx_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/libxmlplusplus-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_" alt="variant">
                 </a>
               </td>
             </tr>
