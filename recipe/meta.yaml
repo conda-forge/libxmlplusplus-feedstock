@@ -10,7 +10,7 @@ source:
   sha256: 13074f59e3288a378cafe9e6847df17f764c23fa29bc94f3305b8bf81efb2cf7
 
 build:
-  number: 1
+  number: 2
   skip: true  # [win]
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -21,12 +21,13 @@ requirements:
     - pkg-config
     - ninja
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
   host:
-    - libxml2
+    - libxml2-devel
     - glib
     - glibmm
   run:
-    - libxml2
+    - libxml2-devel
     - glib
     - glibmm
 
@@ -40,7 +41,7 @@ about:
   license: LGPL-2.1-only
   license_family: GPL2
   license_file: COPYING
-  summary: This library provides a C++ interface to XML files. It uses libxml2 to access the XML files.
+  summary: This library provides a C++ interface to XML files. It uses libxml2-devel to access the XML files.
 
 extra:
   recipe-maintainers:
