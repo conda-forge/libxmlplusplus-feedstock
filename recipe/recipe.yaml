@@ -25,7 +25,6 @@ requirements:
   host:
     - libxml2
     - glib
-    - glibmm
   run_exports:
     - ${{ pin_subpackage('libxmlplusplus', upper_bound='x.x') }}
 
