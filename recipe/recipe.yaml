@@ -24,7 +24,6 @@ requirements:
     - pkg-config
   host:
     - libxml2
-    - glib
   run_exports:
     - ${{ pin_subpackage('libxmlplusplus', upper_bound='x.x') }}
 
