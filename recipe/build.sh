@@ -1,7 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-meson --prefix ${PREFIX} --libdir lib builddir . 
-cd builddir
-ninja -j ${CPU_COUNT}
-ninja test
-ninja install
+set -o xtrace -o nounset -o pipefail -o errexit
+
+meson ${MESON_ARGS} build
+meson compile -C build -v -j ${CPU_COUNT}
+meson test -C build
+meson install -C build

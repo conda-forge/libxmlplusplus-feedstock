@@ -1,0 +1,44 @@
+schema_version: 1
+
+context:
+  version: "5.6.0"
+
+package:
+  name: libxmlplusplus
+  version: ${{ version }}
+
+source:
+  url: https://github.com/libxmlplusplus/libxmlplusplus/releases/download/${{ version }}/libxml++-${{ version }}.tar.xz
+  sha256: cd01ad15a5e44d5392c179ddf992891fb1ba94d33188d9198f9daf99e1bc4fec
+
+build:
+  number: 0
+  skip: win
+
+requirements:
+  build:
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
+    - meson
+    - ninja
+    - pkg-config
+  host:
+    - libxml2
+    - glib
+    - glibmm
+  run_exports:
+    - ${{ pin_subpackage(name, upper_bound='x.x') }}
+
+tests:
+  - script:
+    - test -f ${PREFIX}/lib/libxml++-5.0${SHLIB_EXT}
+
+about:
+  license: LGPL-2.1-only
+  license_file: COPYING
+  summary: This library provides a C++ interface to XML files. It uses libxml2 to access the XML files.
+  homepage: https://libxmlplusplus.github.io/libxmlplusplus/
+
+extra:
+  recipe-maintainers:
+    - izahn
