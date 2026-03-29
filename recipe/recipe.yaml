@@ -23,7 +23,7 @@ requirements:
     - ninja
     - pkg-config
   host:
-    - libxml2
+    - libxml2-devel
   run_exports:
     - ${{ pin_subpackage('libxmlplusplus', upper_bound='x.x') }}
 
